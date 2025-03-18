@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>猪介介数字人才孵化平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/lucide-icons/dist/umd/lucide.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    <header class="relative bg-red-600 text-white">
+        <div class="wave-bg absolute inset-0 opacity-10"></div>
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center relative z-10">
+            <div class="flex items-center">
+                <div class="logo w-10 h-10 mr-3"></div>
+                <h1 class="text-xl md:text-2xl font-bold">猪介介数字人才孵化平台</h1>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="hover:text-red-200 transition-colors">关于我们</a>
+                <a href="#team" class="hover:text-red-200 transition-colors">创始团队</a>
+                <a href="#mentors" class="hover:text-red-200 transition-colors">核心导师</a>
+                <a href="#courses" class="hover:text-red-200 transition-colors">课程体系</a>
+                <a href="#stats" class="hover:text-red-200 transition-colors">数据统计</a>
+            </div>
+            <button class="md:hidden" id="mobileMenuBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+        <div id="mobileMenu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-red-600 z-20 p-4">
+            <div class="flex flex-col space-y-3">
+                <a href="#about" class="hover:text-red-200 transition-colors">关于我们</a>
+                <a href="#team" class="hover:text-red-200 transition-colors">创始团队</a>
+                <a href="#mentors" class="hover:text-red-200 transition-colors">核心导师</a>
+                <a href="#courses" class="hover:text-red-200 transition-colors">课程体系</a>
+                <a href="#stats" class="hover:text-red-200 transition-colors">数据统计</a>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">培育社会价值型<br/>创新人才的平台</h2>
+                <p class="text-lg md:text-xl mb-8 text-red-100">搭建「导师实战教学+真实项目淬炼+企业内推输送」的人才培养生态</p>
+                <div class="flex space-x-4">
+                    <a href="#courses" class="px-6 py-3 bg-white text-red-600 font-medium rounded-md hover:bg-red-100 transition-colors">探索课程</a>
+                    <a href="#about" class="px-6 py-3 border border-white text-white font-medium rounded-md hover:bg-red-700 transition-colors">了解更多</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="w-full max-w-lg h-80 bg-red-500 rounded-lg shadow-xl overflow-hidden">
+                    <div class="w-full h-full bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80');"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">关于我们</h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    猪介介是培育社会价值型创新人才的平台，以"技能实战化+资源产业化"为核心，深耕职业与创业能力的双轨教培，
+                    打造就业竞争力强化体系与创业成功加速通路，构建"教育+产业"的产教融合新生态，为社会输送胜任高价值岗位和驱动商业创新的复合型人才。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">实战导师赋能</h3>
+                    <p class="text-gray-700">组建企业家、企业高管、行业精英、投资人、职业经理人为主的"教练天团"，提供行业一线方法论与资源直通车。</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">融合式教学</h3>
+                    <p class="text-gray-700">研发紧贴人工智能、数字经济、新兴消费等领域的市场型前沿课程体系，提供沉浸式教学。</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">实战淬炼计划</h3>
+                    <p class="text-gray-700">就业赛道：联合企业为结业学员内推精准岗位，快速匹配就业，或企业开设定向实训营。<br><br>创业赛道：通过资源穿透力为有创业萌芽学员快速搭建体系，加速项目商业化落地。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">数据统计</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stat-card">
+                    <div class="text-4xl md:text-5xl font-bold text-red-600" data-count="3000">0</div>
+                    <p class="text-gray-700 mt-2">内推就业人数</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="text-4xl md:text-5xl font-bold text-red-600" data-count="500">0</div>
+                    <p class="text-gray-700 mt-2">孵化创业人数</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="text-4xl md:text-5xl font-bold text-red-600" data-count="5000">0</div>
+                    <p class="text-gray-700 mt-2">学员累计人数</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="text-4xl md:text-5xl font-bold text-red-600" data-count="300">0</div>
+                    <p class="text-gray-700 mt-2">课程体系门数</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="text-3xl md:text-4xl font-bold text-red-600" data-count="150">0</div>
+                    <p class="text-gray-700 mt-2">合作企业</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="text-3xl md:text-4xl font-bold text-red-600" data-count="10">0</div>
+                    <p class="text-gray-700 mt-2">院校合作</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="text-3xl md:text-4xl font-bold text-red-600" data-count="5">0</div>
+                    <p class="text-gray-700 mt-2">共建基地</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="text-3xl md:text-4xl font-bold text-red-600" data-count="65">0</div>
+                    <p class="text-gray-700 mt-2">导师合作</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">创始团队</h2>
+                <p class="text-xl text-gray-600">
+                    以专业视角引领数字人才孵化的未来
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div class="bg-gray-100 overflow-hidden">
+                        <img src="./pic/1.png?auto=format&amp;fit=crop&amp;q=80" alt="温朝晖院长" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-gray-900 mb-2">温朝晖</h3>
+                        <p class="text-red-600 font-medium text-sm mb-4">商学院院长</p>
+                        <p class="text-gray-600 mb-4">资深教育专家，致力于产教融合研究，打造针对数字经济的创新型人才培养方案，推动教育与产业深度融合。</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div class="bg-gray-100 overflow-hidden">
+                        <img src="./pic/2.png?auto=format&amp;fit=crop&amp;q=80" alt="乔悦董事长" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-gray-900 mb-2">乔悦</h3>
+                        <p class="text-red-600 font-medium text-sm mb-4">猪介介董事长</p>
+                        <p class="text-gray-600 mb-4">杰出青年女性企业家，帮助万人+就业，猪介介数字人才孵化平台创始人，专注于打造产教融合新生态。</p>
+                    </div>
+                </div>
+            
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div class="bg-gray-100 overflow-hidden">
+                        <img src="./pic/3.png?auto=format&amp;fit=crop&amp;q=80" alt="吉俊锋创始人" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-gray-900 mb-2">吉俊锋</h3>
+                        <p class="text-red-600 font-medium text-sm mb-4">猪介介联省创始人</p>
+                        <p class="text-gray-600 mb-4">资深企业管理专家，拥有丰富的创业经验与行业资源，致力于构建校企合作新模式，推动人才培养与就业对接。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mentors" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">核心导师团队</h2>
+                <p class="mt-4 text-lg text-gray-600">业界精英汇聚，提供实战指导与行业洞见</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold text-xl">谷思</div>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="font-bold text-xl text-gray-900 mb-1">谷思贤</h3>
+                                <p class="text-red-600 text-sm mb-3">AI+短视频运营</p>
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 mr-2 mb-2">10+年短视频行业经验</span>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 mr-2 mb-2">AI+短视频课程研发者</span>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 mr-2 mb-2">AI+短视频融合领先倡导师</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">谷老师在视频制作领域深耕多年，是一位集视频创作与运营能力于一身的多边形人才。擅长运用AI赋能短视频创作，精通包括短视频广告、宣传片在内的多种视频类型的策划与制作流程。</p>
+                                <div class="pt-4 border-t border-gray-100">
+                                    <h4 class="font-semibold text-gray-900 mb-2">成果亮点：</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                            短视频直播主导项目累计GMV达15亿
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                            AI+剪辑融入创作，孵化多个100万粉丝账号
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                            AI+技术提升40%内容推荐精准度，提高30%粉丝留存率
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold text-xl">黄一</div>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="font-bold text-xl text-gray-900 mb-1">黄一笑</h3>
+                                <p class="text-red-600 text-sm mb-3">AI+职场办公实操师</p>
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 mr-2 mb-2">阿里云认证培训基地资深讲师</span>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 mr-2 mb-2">阿里巴巴认证人才库成员</span>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 mr-2 mb-2">《AI办公应用师》创作者</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">擅长AI职场办公领域，研发AI办公技术在不同领域的实际应用案例和方法。拥有3年AI应用研发经验，率先将AI与实际工作结合。</p>
+                                <div class="pt-4 border-t border-gray-100">
+                                    <h4 class="font-semibold text-gray-900 mb-2">成果亮点：</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                            研发5大AI教育产品线，累计学员10万人
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                            研发3800套标准化AI课件，覆盖K12/职业教育/老年大学全场景
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                            独创"万元级AI作战包"助力2000多家小微企业线上转型
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold text-xl">布鸣</div>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="font-bold text-xl text-gray-900 mb-1">布鸣</h3>
+                                <p class="text-red-600 text-sm mb-3">抖音直播运营</p>
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 mr-2 mb-2">15年电子商务实操经验</span>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 mr-2 mb-2">5年短视频直播运营经验</span>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 mr-2 mb-2">抖音最佳执行运营官</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">擅长通过直播运营、付费推广、数据分析、矩阵放大等打造自成流量体系，在传统电商、短视频直播，直播带货，娱播孵化等领域获得显著成果。</p>
+                                <div class="pt-4 border-t border-gray-100">
+                                    <h4 class="font-semibold text-gray-900 mb-2">成果亮点：</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                            2013年负责天猫户外top店铺运营，年销售额2亿
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                            2020年跑通抖音饰品0-1，搭建短视频直播带货团队，年销2500万
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                            2022年抖音游戏直播矩阵号打自然流，月流水100多万
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-bold text-xl">黄珂</div>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="font-bold text-xl text-gray-900 mb-1">黄珂</h3>
+                                <p class="text-red-600 text-sm mb-3">商业AI咨询师</p>
+                                <div class="mb-4">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 mr-2 mb-2">5年应用端开发运营经验</span>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 mr-2 mb-2">企业AI+落地实操顾问</span>
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 mr-2 mb-2">火山引擎官方合作伙伴</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">擅长通过AI+方式进行商业化，为C端、B端用户搭建AI助理实现真正的降本增效，根据用户需求搭建AI应用实现商业化。</p>
+                                <div class="pt-4 border-t border-gray-100">
+                                    <h4 class="font-semibold text-gray-900 mb-2">成果亮点：</h4>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                            研发AI+商业产品30+
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                            研发Coze+智能体课件，覆盖职业教育全场景
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                            帮助20多家企业定制AI应用落地方案，降本增效
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors duration-300">
+                    查看更多导师
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">课程体系</h2>
+            
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-red-600">AI系列实战课程</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="course-card">
+                        <div class="bg-red-50 rounded-t-lg p-4 flex items-center">
+                            <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold">AI自媒体全能实战课程</h4>
+                        </div>
+                        <div class="p-6">
+                            <ul class="mb-4 space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>AI文案创作</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>AI绘图创作</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>AI视频创作</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>拍摄剪辑创作</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>短视频运营</span>
+                                </li>
+                            </ul>
+                            <div class="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
+                                <span class="text-gray-600">总课时: <span class="font-semibold text-red-600">24课时</span></span>
+                                <span class="text-gray-600">总用时: <span class="font-semibold text-red-600">12天</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="bg-red-50 rounded-t-lg p-4 flex items-center">
+                            <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold">AI职场办公实战课程</h4>
+                        </div>
+                        <div class="p-6">
+                            <ul class="mb-4 space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>AI GC的应用 + 提示词对话</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>用AI快速生产活动文案</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>用AI提升图片设计效率</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>用AI快速制作PPT</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>用AI高效处理Excel表格</span>
+                                </li>
+                            </ul>
+                            <div class="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
+                                <span class="text-gray-600">总课时: <span class="font-semibold text-red-600">10课时</span></span>
+                                <span class="text-gray-600">总用时: <span class="font-semibold text-red-600">5天</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="bg-red-50 rounded-t-lg p-4 flex items-center">
+                            <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold">AI设计绘画实战课程</h4>
+                        </div>
+                        <div class="p-6">
+                            <ul class="mb-4 space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>MJ和星流的快速出图</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>Sd-web ui</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>Comfy ui</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>实操训练</span>
+                                </li>
+                            </ul>
+                            <div class="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
+                                <span class="text-gray-600">总课时: <span class="font-semibold text-red-600">30课时</span></span>
+                                <span class="text-gray-600">总用时: <span class="font-semibold text-red-600">15天</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-red-600">直播短视频系列课程</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="course-card">
+                        <div class="bg-red-50 rounded-t-lg p-4 flex items-center">
+                            <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold">抖音零帧起手实战课程</h4>
+                        </div>
+                        <div class="p-6">
+                            <ul class="mb-4 space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>抖音短视频 + 直播算法详解</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>抖音带货爆品运营思维</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>短视频带货脚本内容策划</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>直播带货脚本内容策划</span>
+                                </li>
+                            </ul>
+                            <div class="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
+                                <span class="text-gray-600">总课时: <span class="font-semibold text-red-600">3课时</span></span>
+                                <span class="text-gray-600">总用时: <span class="font-semibold text-red-600">1天</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="bg-red-50 rounded-t-lg p-4 flex items-center">
+                            <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold">主播孵化实战课程</h4>
+                        </div>
+                        <div class="p-6">
+                            <ul class="mb-4 space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>直播起号</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>短视频制作与运营</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>带货直播运营</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>娱乐直播运营</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>直播设置技巧与案例分析</span>
+                                </li>
+                            </ul>
+                            <div class="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
+                                <span class="text-gray-600">总课时: <span class="font-semibold text-red-600">20课时</span></span>
+                                <span class="text-gray-600">总用时: <span class="font-semibold text-red-600">5天</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="bg-red-50 rounded-t-lg p-4 flex items-center">
+                            <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold">自媒体课程</h4>
+                        </div>
+                        <div class="p-6">
+                            <ul class="mb-4 space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>如何快速打造IP爆款视频</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>怎么通过自媒体去变现</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>手机拍摄剪辑速成</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-600 mr-2">•</span>
+                                    <span>自媒体运营实操</span>
+                                </li>
+                            </ul>
+                            <div class="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
+                                <span class="text-gray-600">总课时: <span class="font-semibold text-red-600">14课时</span></span>
+                                <span class="text-gray-600">总用时: <span class="font-semibold text-red-600">3天</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 bg-red-600 text-white font-medium rounded-md hover:bg-red-700 transition-colors">
+                    查看完整课程体系
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="cooperation" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">校企合作</h2>
+                <p class="text-xl text-gray-600">
+                    共建产教融合新生态，培养未来数字人才
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">高校合作模式</h3>
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-md bg-red-100 text-red-600 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-school"><circle cx="12" cy="10" r="1"></circle><path d="M22 20V8h-4l-6-4-6 4H2v12h4v-9l6-4 6 4v9h4Z"></path><path d="M6 17v.01"></path><path d="M6 13v.01"></path><path d="M18 17v.01"></path><path d="M18 13v.01"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-900 mb-1">校内联合实训基地</h4>
+                                <p class="text-gray-600">在高校内部建立联合实训基地，提供专业实践教学环境和设备支持，打造学生实战的第一阵地。</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-md bg-red-100 text-red-600 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-900 mb-1">订单式人才培养</h4>
+                                <p class="text-gray-600">根据企业需求定制培养方案，实现人才培养精准对接市场需求，毕业即就业，高薪高质量就业。</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-md bg-red-100 text-red-600 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-check"><path d="M8 3H2v15h7c1.7 0 3 1.3 3 3V7c0-2.2-1.8-4-4-4Z"></path><path d="m16 12 2 2 4-4"></path><path d="M22 6V3h-6c-2.2 0-4 1.8-4 4v14c0-1.7 1.3-3 3-3h7v-2.3"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-900 mb-1">课程植入与师资培训</h4>
+                                <p class="text-gray-600">为高校提供数字技能课程体系与教学资源，并为高校教师提供专业培训，提升科研与教学能力。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">企业服务模式</h3>
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-md bg-red-100 text-red-600 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-round"><path d="M18 21a8 8 0 0 0-16 0"></path><circle cx="10" cy="8" r="5"></circle><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-900 mb-1">人才直供服务</h4>
+                                <p class="text-gray-600">为企业量身定制人才培养方案，提供高质量的人才直供服务，降低企业招聘与培训成本。</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-md bg-red-100 text-red-600 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-900 mb-1">数字化转型咨询</h4>
+                                <p class="text-gray-600">为企业提供数字化转型咨询服务，打造AI赋能方案，助力企业实现降本增效和业务创新。</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-md bg-red-100 text-red-600 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-award"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-900 mb-1">员工技能提升</h4>
+                                <p class="text-gray-600">为企业员工提供数字技能培训，提升团队整体能力水平，助力企业内部人才梯队建设。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-red-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">立即开启您的数字技能提升之旅</h2>
+                <p class="text-xl text-red-100 mb-10">与猪介介一起，培养社会价值型创新人才，打造就业竞争力</p>
+                <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="#" class="px-8 py-4 bg-white text-red-600 font-medium rounded-md hover:bg-red-100 transition-colors">
+                        加入我们的课程
+                    </a>
+                    <a href="#contact" class="px-8 py-4 border border-white text-white font-medium rounded-md hover:bg-red-700 transition-colors">
+                        联系我们
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-gray-50 relative overflow-hidden bg-gray-50">
+        <div class="hero-pattern absolute inset-0 opacity-5"></div>
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">联系我们</h2>
+                <p class="text-xl text-gray-600">
+                    期待与您共创数字人才培养新未来
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">项目咨询</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500">
+                            </div>
+                            <div>
+                                <label for="organization" class="block text-sm font-medium text-gray-700 mb-1">单位/机构</label>
+                                <input type="text" id="organization" name="organization" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">邮箱</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">电话</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">合作需求</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-3 bg-red-600 text-white rounded-md font-medium hover:bg-red-700 transition-colors">提交信息</button>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">联系方式</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone text-red-600 mr-3"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <span class="text-gray-700">18688437690（微信同号）</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail text-red-600 mr-3"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                                <span class="text-gray-700 font-geist-mono">contact@zhujiejie.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin text-red-600 mr-3"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <span class="text-gray-700">杭州市西湖区文三路 478 号华星世纪大厦</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">关注我们</h3>
+                        <p class="text-gray-600 mb-4">关注我们的官方账号，获取最新课程资讯和行业动态</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="h-10 w-10 rounded-lg bg-red-100 flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wechat"><path d="M9.5 9.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5h.5c1.1 0 2-.9 2-2s-.9-2-2-2H7"></path><path d="M14.5 15.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-.5c-1.1 0-2 .9-2 2s.9 2 2 2h3"></path><path d="M8.5 2h7A4.5 4.5 0 0 1 20 6.5v7a4.5 4.5 0 0 1-4.5 4.5h-7A4.5 4.5 0 0 1 4 13.5v-7A4.5 4.5 0 0 1 8.5 2z"></path></svg>
+                            </a>
+                            <a href="#" class="h-10 w-10 rounded-lg bg-red-100 flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg>
+                            </a>
+                            <a href="#" class="h-10 w-10 rounded-lg bg-red-100 flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                            </a>
+                            <a href="#" class="h-10 w-10 rounded-lg bg-red-100 flex items-center justify-center text-red-600 hover:bg-red-600 hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-12 bg-gray-900 text-gray-400">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">猪介介</h3>
+                    <p class="mb-4">数字人才孵化平台，培育社会价值型创新人才</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-white transition-colors">关于我们</a></li>
+                        <li><a href="#courses" class="hover:text-white transition-colors">课程体系</a></li>
+                        <li><a href="#team" class="hover:text-white transition-colors">创始团队</a></li>
+                        <li><a href="#mentors" class="hover:text-white transition-colors">核心导师</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">加入我们</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition-colors">学员报名</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">导师申请</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">企业合作</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">院校合作</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">联系方式</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>广州市黄埔区南岗丰泽园一栋3楼303</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>contact@zhujiejie.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>010-12345678</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 mt-8 border-t border-gray-800 text-sm text-center">
+                <p class="mb-2">© 2025 猪介介数字人才孵化平台. 保留所有权利</p>
+                </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
